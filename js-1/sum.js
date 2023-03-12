@@ -9,11 +9,11 @@ function suma(positivo){
 }
 
 //código de prueba
-n=4
+const n=4;
 console.log("La suma de todos los numeros desde 1 hasta el " + n + " = "+ suma(n));
 
-n=10
+const n=10
 console.log("La suma de todos los numeros desde 1 hasta el " + n + " = "+ suma(n));
 
-n=15
+const n=15
 console.log("La suma de todos los numeros desde 1 hasta el " + n + " = "+ suma(n));
