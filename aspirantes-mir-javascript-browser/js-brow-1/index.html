@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mayúsculas</title>
+  </head>
+  <body>
+    <!--Ejercicio 1 - con botón -->
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <!-- aca va el resultado tal cual se escribe -->
+    <p id="resultado"></p>
+    <!-- aca va el resultado en mayusculas -->
+    <p id="resultadoMayusculas"></p>
+    <button class="btn" id="boton">Convertir mensaje a mayusculas</button>
+    <script>
+        let input = document.querySelector('#texto');//captura el campo input con el id "texto", guardando el nodo a un variable llamada input
+        let resultado = document.querySelector('#resultado');//captura el párrafo con el id "resultado", guardando el node en la variable resultado
+
+        //Otras alternativas para seleccionar el input y el párrafo:
+        //let input = document.getElementById('texto');
+        //let resultado = document.getElementById('resultado');
+        let boton = document.getElementById('boton');
+        let resultadoMayusculas = document.getElementById('resultadoMayusculas');
+
+        input.addEventListener('input', function() {
+            let texto = input.value;//Entrega el contenido del input a la variable texto
+            resultado.textContent = texto; //Entrega al párrafo con id "resultado" el contenido de la variable texto
+        })
+
+        boton.addEventListener('click', function() {
+            let text = input.value.toUpperCase();//texto (convertido a Mayusculas) se digita: input.value.toUpperCase();
+            resultadoMayusculas.textContent = text;
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mayúsculas</title>
+  </head>
+  <body>
+    <!--Ejercicio 1 - sin botón Convirtiendo lo que el usuario digita a Mayusculas y mostrándo el cambio en el párrafo-->
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <p id="resultado"></p>
+    
+    <script>
+        let input = document.querySelector('#texto');
+        let resultado = document.querySelector('#resultado');
+        
+        //Otras alternativas para seleccionar el input y el párrafo:
+        //let input = document.getElementById('texto');
+        //let resultado = document.getElementById('resultado');
+
+        input.addEventListener('input', function() {
+            let texto = input.value.toUpperCase();//texto (convertido a Mayusculas) se digita: input.value.toUpperCase();
+            resultado.textContent = texto;
+        })
+    </script>
+  </body>
+</html>
